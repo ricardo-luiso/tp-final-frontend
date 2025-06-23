@@ -51,7 +51,7 @@ body {
 
 .main-section {
   grid-area: main;
-  background-image: url(/images/desktop-image-hero-1.jpg);
+  background-image: url(../images/desktop-image-hero-1.jpg);
   min-height: 500px;
   background-size: cover;
   background-position: center;
@@ -128,7 +128,7 @@ body {
   grid-area: image1;
   min-height: 250px;
   height: 100%;
-  background-image: url(/images/image-about-dark.jpg);
+  background-image: url(../images/image-about-dark.jpg);
   background-position: center;
   background-repeat: no-repeat
 }
@@ -148,7 +148,7 @@ body {
 
 .light {
   grid-area: image2;
-  background-image: url(/images/image-about-light.jpg);
+  background-image: url(../images/image-about-light.jpg);
   background-repeat: no-repeat
 }
 
