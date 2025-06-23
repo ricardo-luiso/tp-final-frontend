@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'League Spartan';
+    src: url('../fonts/LeagueSpartan-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'League Spartan';
+    src: url('../fonts/LeagueSpartan-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'League Spartan';
+    src: url('../fonts/LeagueSpartan-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+}
+
+:root {
+  --Dark-Gray: hsl(0, 0%, 63%);
+  --Black: hsl(0, 0%, 0%);
+  --White: hsl(0, 0%, 100%);
+  --Very-Dark-Gray: hsl(0, 0%, 27%);
+}
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+}
+
+.main {
+  display: grid;
+  max-width: 1440px;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, max-content);
+  grid-template-areas: 
+  "main"
+  "action"
+  "image1"
+  "about"
+  "image2";
+}
+
+.main-section {
+  grid-area: main;
+  background-image: url(/images/desktop-image-hero-1.jpg);
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+.nav-box {
+  display: flex;
+}
+
+.links-container {
+  display: none;
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.image-controls {
+  background-color: var(--Black);
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  grid-area: main;
+  align-self: end;
+  justify-self: end;
+}
+
+.arrow-control {
+  height: 40%;
+}
+
+.shop-now {
+  grid-area: action;
+}
+
+.text {
+  line-height: 1.5;
+  margin: 1em 0 2em;
+  color: var(--Dark-Gray);
+  font-weight: 600;
+}
+
+.link-shop {
+  text-decoration: none;
+  color: var(--Very-Dark-Gray);
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-weight: bold;
+}
+
+.shop-arrow {
+  margin-left: 20px;
+}
+
+.dark {
+  grid-area: image1;
+  min-height: 250px;
+  height: 100%;
+  background-image: url(/images/image-about-dark.jpg);
+  background-position: center;
+  background-repeat: no-repeat
+}
+
+.text-about {
+  margin: 1em 0 0 0;
+}
+
+.title-h3 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.about {
+  grid-area: about;
+}
+
+.light {
+  grid-area: image2;
+  background-image: url(/images/image-about-light.jpg);
+  background-repeat: no-repeat
+}
+
+@media (min-width:768px) {
+  .container {
+    width: 85%;
+    padding: 70px 0;
+  }
+
+  .main {
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas: 
+    "main main main main action action action"
+    "main main main main action action action"
+    "main main main main action action action"
+    "image1 image1 about about about image2 image2"
+    "image1 image1 about about about image2 image2"
+    ;
+  }
+
+  .image-controls {
+    grid-area: action;
+    justify-self: start;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .links-container {
+    padding: 0;
+    display: flex;
+    grid-auto-flow: column;
+    gap: 1em;
+    margin-left: 10%;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .list {
+    list-style: none;
+  }
+
+  .link {
+    color: var(--White);
+    text-decoration: none;
+  }
+}
